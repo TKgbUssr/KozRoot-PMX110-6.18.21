@@ -18,7 +18,7 @@ KozRoot 是一个针对 **OPPO Find X10 Pro Max（PMX110，MT6995，Android 17 /
   - capsB：`cred+0x42 = 0x1`（追加 CAP_SYS_MODULE），worker `finit_module` + `root_stage`
   - **全程不需要 fsuid=0**，共 5 个阶段
 - **多管理器（5 套）**：KernelSU-Next v3.4.2（+SUSFS）/ 官方 KernelSU v3.3.1 /
-  SukiSU-Ultra v4.3.0（KPM）/ FinaSU v1.3.2（+NoMount）/ BakaSU v4.2.0-rc3；
+  SukiSU-Ultra v4.3.0/ FinaSU v1.3.2（+NoMount）/ BakaSU v4.2.0-rc3；
   可在提权页切换，自动安装/升级管理器，按管理器做 late-load 与 grant
 - 内核模块「离线预重定位」+ 运行时按 KASLR slide 平移（`PatchKo`）
 - 稳定性措施：exploit 进程状态清理（冻结而非 SIGKILL）、worker child 存活校验、
