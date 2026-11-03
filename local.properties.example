@@ -1,0 +1,3 @@
+# 复制本文件为 local.properties，并按本机路径修改。
+# 独立仓库不包含 local.properties（包含本机绝对路径）。
+sdk.dir=C\:\\Android\\Sdk

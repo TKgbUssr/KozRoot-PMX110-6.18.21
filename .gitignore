@@ -1,0 +1,23 @@
+# Gradle / build outputs
+build/
+app/build/
+.gradle/
+.kotlin/
+local.properties
+*.iml
+.idea/
+
+# Signing secrets (never commit)
+*.jks
+*.keystore
+release/
+
+# APK / crash logs / captures
+# 注意：app/src/main/assets/*.apk 是内置管理器 APK，必须提交，不要全局忽略 *.apk
+/app/build/**/*.apk
+hs_err_pid*.log
+*.hprof
+
+# OS junk
+.DS_Store
+Thumbs.db
