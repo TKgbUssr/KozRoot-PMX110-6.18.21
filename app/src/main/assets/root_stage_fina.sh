@@ -109,6 +109,12 @@ echo "set_su_compat_rc=$?"
 /data/adb/ksud feature set adb_root 1 2>&1
 echo "set_adb_root_rc=$?"
 
+echo "--- hidden_api_policy (prevent soft-reboot networkstack crash loop) ---"
+for K in hidden_api_policy hidden_api_policy_p_apps hidden_api_policy_pre_p_apps; do
+    settings put global "$K" 1 2>&1
+    echo "set_${K}_rc=$?"
+done
+
 echo "--- unload ColorOS anti-root guard ---"
 rmmod oplusboot 2>&1; echo "rm_boot=$?"
 rmmod oplus_secure_common 2>&1; echo "rm_common=$?"
